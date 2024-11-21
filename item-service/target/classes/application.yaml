@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+hm:
+  db:
+    database: hm-item
+    port: 3306
+    host: 192.168.40.136
+    un: root
+    pw: 123
+  swagger:
+    title: 黑马商城商品服务接口文档
+    desc: 黑马商城商品服务接口文档
+    package: com.hmall.item.controller
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # 开启请求方式前缀
+  elasticsearch:
+    # 链接超时时间，单位：毫秒
+    connection-timeout: 100000
+
+feign:
+  sentinel:
+    enabled: true # 开启feign对sentinel的支持
+
+

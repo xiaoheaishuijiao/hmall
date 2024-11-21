@@ -1,0 +1,30 @@
+server:
+  port: 8084
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # 开启请求方式前缀
+
+
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  db:
+    database: hm-user
+    port: 3306
+    host: 127.192.40.136
+    un: root
+    pw: 123
+  swagger:
+    title: 黑马商城用户服务接口文档
+    desc: 黑马商城用户服务接口文档
+    package: com.hmall.user.controller
+feign:
+  sentinel:
+    enabled: true # 开启feign对sentinel的支持

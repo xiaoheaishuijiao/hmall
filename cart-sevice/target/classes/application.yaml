@@ -1,0 +1,33 @@
+server:
+  port: 8082
+  tomcat:
+    threads:
+      max: 50 #允许访问的最大线程数
+    accept-count: 50
+    max-connections: 100
+
+
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true
+
+hm:
+  db:
+    database: hm-cart
+    port: 3306
+    host: 127.192.40.136
+    un: root
+    pw: 123
+  swagger:
+    title: 黑马商城购物车接口文档
+    desc: 黑马商城购物车接口文档
+    package: com.hmall.cart.controller
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # 开启请求方式前缀
