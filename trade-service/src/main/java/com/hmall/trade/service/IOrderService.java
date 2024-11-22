@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.hmall.trade.domain.dto.OrderFormDTO;
 import com.hmall.trade.domain.po.Order;
 
+import java.io.IOException;
+
 
 /**
  * <p>
@@ -15,7 +17,7 @@ import com.hmall.trade.domain.po.Order;
  */
 public interface IOrderService extends IService<Order> {
 
-    Long createOrder(OrderFormDTO orderFormDTO);
+    Long createOrder(OrderFormDTO orderFormDTO) throws IOException;
 
     void markOrderPaySuccess(Long orderId);
 

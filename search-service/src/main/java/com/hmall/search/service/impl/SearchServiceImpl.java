@@ -80,9 +80,62 @@ public class SearchServiceImpl extends ServiceImpl<SearchMapper, Item> implement
         List<ItemDTO> itemDTOS = parseResponseResult(response);
         // 分页查询
         Page<ItemDTO> page=new Page<>(query.getPageNo(), query.getPageSize());
+        //5.关闭ES
         tearDown();
         // 封装并返回PageDTO.of(result, ItemDTO.class)
         return PageDTO.of(page, itemDTOS);
+    }
+
+    /**
+     * 根据id来查询商品
+     *
+     * @param id 商品id值
+     * @return 商品DTO
+     */
+    @Override
+    public ItemDTO listByIdByES(Long id) throws IOException {
+        //1.开启ES连接
+        setUp();
+        //2.创建request
+        SearchRequest request = new SearchRequest("items");
+        //3.构建DSL语句
+        request.source().query(QueryBuilders.termQuery("id",id));
+        //4.发送请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+        //5.解析
+        List<ItemDTO> itemDTOS = parseResponseResult(response);
+        //6.关闭ES
+        tearDown();
+        return itemDTOS.get(0);
+    }
+
+    /**
+     * 根据ids来批量查询商品
+     *
+     * @param ids 商品的ids
+     * @return 商品DTO
+     */
+    @Override
+    public List<ItemDTO> listByIdsByES(List<Long> ids) throws IOException {
+        //1.开启ES连接
+        setUp();
+        //1.1创建ItemDTOs
+        List<ItemDTO> itemDTOReturn = new ArrayList<>();
+        //2.创建request
+        for (Long id : ids){
+            SearchRequest request = new SearchRequest("items");
+            //3.构建DSL语句
+            request.source().query(QueryBuilders.termQuery("id",id));
+            //4.发送请求
+            SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+            //5.解析
+            List<ItemDTO> itemDTOS = parseResponseResult(response);
+            itemDTOReturn.addAll(itemDTOS);
+        }
+        //6.关闭ES
+        tearDown();
+        //7.返回
+        return itemDTOReturn;
     }
 
     /**

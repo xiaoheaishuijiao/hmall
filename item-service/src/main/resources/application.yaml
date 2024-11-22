@@ -22,6 +22,12 @@ spring:
   elasticsearch:
     # 链接超时时间，单位：毫秒
     connection-timeout: 100000
+  rabbitmq:
+    host: 192.168.40.136
+    port: 5672
+    virtual-host: /hmall
+    username: hmall
+    password: 123
 
 feign:
   sentinel:

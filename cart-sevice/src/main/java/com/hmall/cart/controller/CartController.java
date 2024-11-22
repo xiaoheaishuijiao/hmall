@@ -13,6 +13,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 
 @Api(tags = "购物车相关接口")
@@ -42,7 +43,7 @@ public class CartController {
 
     @ApiOperation("查询购物车列表")
     @GetMapping
-    public List<CartVO> queryMyCarts(){
+    public List<CartVO> queryMyCarts() throws IOException {
         return cartService.queryMyCarts();
     }
     @ApiOperation("批量删除购物车中商品")

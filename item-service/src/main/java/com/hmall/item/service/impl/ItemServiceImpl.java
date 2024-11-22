@@ -57,4 +57,10 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
             throw new BizIllegalException("恢复库存失败！");
         }
     }
+
+    @Override
+    public Long saveAndGetId(Item item) {
+        save(item);
+        return item.getId();
+    }
 }

@@ -26,15 +26,10 @@ import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Api(tags = "搜索相关接口")
@@ -50,6 +45,18 @@ public class SearchController {
     @GetMapping("/list")
     public PageDTO<ItemDTO> search(ItemPageQuery query) throws IOException {
         return searchService.listByES(query);
+    }
+
+    @ApiOperation("根据id搜索商品")
+    @GetMapping("/{id}")
+    public ItemDTO searchById(@PathVariable("id") Long id) throws IOException {
+        return searchService.listByIdByES(id);
+    }
+
+    @ApiOperation("根据id批量搜索商品")
+    @GetMapping
+    public List<ItemDTO> searchByIds(@RequestParam("ids") List<Long> ids) throws IOException {
+        return searchService.listByIdsByES(ids);
     }
 
 }

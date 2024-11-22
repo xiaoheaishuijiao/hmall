@@ -5,6 +5,7 @@ import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public interface ICartService extends IService<Cart> {
 
     void addItem2Cart(CartFormDTO cartFormDTO);
 
-    List<CartVO> queryMyCarts();
+    List<CartVO> queryMyCarts() throws IOException;
 
     void removeByItemIds(Collection<Long> itemIds);
 }

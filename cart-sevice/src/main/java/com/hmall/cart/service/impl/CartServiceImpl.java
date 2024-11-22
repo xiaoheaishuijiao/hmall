@@ -3,6 +3,7 @@ import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.api.client.ItemClient;
+import com.hmall.api.client.SearchClient;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.cart.config.CartProperties;
 import com.hmall.cart.domain.dto.CartFormDTO;
@@ -19,6 +20,8 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
+
+import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +45,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     private final DiscoveryClient discoveryClient;
     
     private final ItemClient itemClient;
+    private final SearchClient searchClient;
     private final CartProperties cartProperties;
 
     @Override
@@ -68,7 +72,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     }
 
     @Override
-    public List<CartVO> queryMyCarts() {
+    public List<CartVO> queryMyCarts() throws IOException {
         // 1.查询我的购物车列表
         List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
         if (CollUtils.isEmpty(carts)) {
@@ -85,7 +89,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         return vos;
     }
 
-    private void handleCartItems(List<CartVO> vos) {
+    private void handleCartItems(List<CartVO> vos) throws IOException {
         // 1.获取商品id
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
         // 2.查询商品
@@ -114,7 +118,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 //            return;
 //        }
 //        List<ItemDTO> items=response.getBody();
-        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
+        List<ItemDTO> items = searchClient.searchByIds(itemIds);
         System.out.println(items);
         if (CollUtils.isEmpty(items)) {
             return;

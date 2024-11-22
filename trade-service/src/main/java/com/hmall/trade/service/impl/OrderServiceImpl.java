@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.api.client.CartClient;
 import com.hmall.api.client.ItemClient;
+import com.hmall.api.client.SearchClient;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.common.exception.BadRequestException;
@@ -25,6 +26,8 @@ import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +53,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
     private final ItemClient itemClient;
 
-    private final CartClient cartClient;
+    private final SearchClient searchClient;
 
     private final RabbitTemplate rabbitTemplate;
 
     @Override
     @GlobalTransactional
-    public Long createOrder(OrderFormDTO orderFormDTO) {
+    public Long createOrder(OrderFormDTO orderFormDTO) throws IOException {
         // 1.订单数据
         Order order = new Order();
         // 1.1.查询商品
@@ -66,7 +69,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 .collect(Collectors.toMap(OrderDetailDTO::getItemId, OrderDetailDTO::getNum));
         Set<Long> itemIds = itemNumMap.keySet();
         // 1.3.查询商品
-        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
+        List<ItemDTO> items = searchClient.searchByIds(itemIds);
+//        System.out.println(items);
         if (items == null || items.size() < itemIds.size()) {
             throw new BadRequestException("商品不存在");
         }

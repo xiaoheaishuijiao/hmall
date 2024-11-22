@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @Api(tags = "订单管理接口")
 @RestController
 @RequestMapping("/orders")
@@ -26,7 +28,7 @@ public class OrderController {
 
     @ApiOperation("创建订单")
     @PostMapping
-    public Long createOrder(@RequestBody OrderFormDTO orderFormDTO){
+    public Long createOrder(@RequestBody OrderFormDTO orderFormDTO) throws IOException {
         return orderService.createOrder(orderFormDTO);
     }
 

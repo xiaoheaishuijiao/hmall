@@ -1,20 +1,24 @@
 package com.hmall.item.controller;
 
 
-import cn.hutool.core.thread.ThreadUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hmall.api.client.SearchClient;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.common.domain.PageDTO;
 import com.hmall.common.domain.PageQuery;
 import com.hmall.common.utils.BeanUtils;
+import com.hmall.item.constants.MQConstants;
 import com.hmall.item.domain.po.Item;
 import com.hmall.item.service.IItemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @Api(tags = "商品管理相关接口")
@@ -24,6 +28,8 @@ import java.util.List;
 public class ItemController {
 
     private final IItemService itemService;
+
+    private final RabbitTemplate rabbitTemplate;
 
     @ApiOperation("分页查询商品")
     @GetMapping("/page")
@@ -37,23 +43,35 @@ public class ItemController {
 
     @ApiOperation("根据id批量查询商品")
     @GetMapping
-    public List<ItemDTO> queryItemByIds(@RequestParam("ids") List<Long> ids){
+    public List<ItemDTO> queryItemByIds(@RequestParam("ids") List<Long> ids) throws IOException {
         // 模拟网络延迟
 //        ThreadUtil.sleep(500);
-        return itemService.queryItemByIds(ids);
+//        return searchClient.searchByIds(ids);
+        return null;
     }
 
     @ApiOperation("根据id查询商品")
     @GetMapping("{id}")
-    public ItemDTO queryItemById(@PathVariable("id") Long id) {
-        return BeanUtils.copyBean(itemService.getById(id), ItemDTO.class);
+    public ItemDTO queryItemById(@PathVariable("id") Long id) throws IOException {
+//        return BeanUtils.copyBean(searchClient.searchById(id), ItemDTO.class);
+        return null;
     }
 
     @ApiOperation("新增商品")
     @PostMapping
+    @Transactional
     public void saveItem(@RequestBody ItemDTO item) {
         // 新增
-        itemService.save(BeanUtils.copyBean(item, Item.class));
+        Long id = itemService.saveAndGetId(BeanUtils.copyBean(item, Item.class));
+        //更新ES,MQ实现
+        if (id!=null){
+            rabbitTemplate.convertAndSend(MQConstants.ITEM_EXCHANGE_NAME,MQConstants.ITEM_UPDATE_KEY,id,
+                    message -> {
+                        message.getMessageProperties().setDelay(10000);
+                        return message;
+                    }
+            );
+        }
     }
 
     @ApiOperation("更新商品状态")
