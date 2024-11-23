@@ -61,13 +61,13 @@ public class ItemController {
     @PostMapping
     @Transactional
     public void saveItem(@RequestBody ItemDTO item) {
-        // 新增
+        //1.新增
         Long id = itemService.saveAndGetId(BeanUtils.copyBean(item, Item.class));
-        //更新ES,MQ实现
+        //2.更新ES,MQ实现
         if (id!=null){
             rabbitTemplate.convertAndSend(MQConstants.ITEM_EXCHANGE_NAME,MQConstants.ITEM_UPDATE_KEY,id,
                     message -> {
-                        message.getMessageProperties().setDelay(10000);
+                        message.getMessageProperties().setDelay(1000);
                         return message;
                     }
             );
@@ -77,25 +77,44 @@ public class ItemController {
     @ApiOperation("更新商品状态")
     @PutMapping("/status/{id}/{status}")
     public void updateItemStatus(@PathVariable("id") Long id, @PathVariable("status") Integer status){
+        //1.更新商品状态
         Item item = new Item();
         item.setId(id);
         item.setStatus(status);
-        itemService.updateById(item);
+        boolean isSuccess = itemService.updateById(item);
+        //2.通过MQ通知ES实现更新
+        if (isSuccess){
+            rabbitTemplate.convertAndSend(MQConstants.ITEM_EXCHANGE_NAME,MQConstants.ITEM_STATUS_UPDATE_KEY,item,
+                    message -> {
+                        message.getMessageProperties().setDelay(1000);
+                        return message;
+                    }
+            );
+        }
     }
 
     @ApiOperation("更新商品")
     @PutMapping
     public void updateItem(@RequestBody ItemDTO item) {
-        // 不允许修改商品状态，所以强制设置为null，更新时，就会忽略该字段
+        //1.不允许修改商品状态，所以强制设置为null，更新时，就会忽略该字段
         item.setStatus(null);
-        // 更新
-        itemService.updateById(BeanUtils.copyBean(item, Item.class));
+        //2.更新
+        boolean isSuccess = itemService.updateById(BeanUtils.copyBean(item, Item.class));
+        //2.通过MQ通知ES实现更新
+        if (isSuccess) {
+            rabbitTemplate.convertAndSend(MQConstants.ITEM_EXCHANGE_NAME,MQConstants.ITEM_ALL_UPDATE_KEY,item);
+        }
     }
 
     @ApiOperation("根据id删除商品")
     @DeleteMapping("{id}")
     public void deleteItemById(@PathVariable("id") Long id) {
-        itemService.removeById(id);
+        //1.删除商品
+        boolean isSuccess = itemService.removeById(id);
+        //2.通过MQ通知ES实现更新
+        if (isSuccess) {
+            rabbitTemplate.convertAndSend(MQConstants.ITEM_EXCHANGE_NAME,MQConstants.ITEM_DELETE_KEY,id);
+        }
     }
 
     @ApiOperation("批量扣减库存")

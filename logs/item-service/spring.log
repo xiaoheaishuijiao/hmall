@@ -1,426 +1,331 @@
-21:24:41:662  INFO 49960 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
-21:24:43:070  INFO 49960 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9ca8d87e-a934-3e49-b90d-691d65f4328b
-21:24:43:131  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:131  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:131  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:158  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:163  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:164  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:166  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$564/0x0000000800685c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:166  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:171  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:175  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:43:179  INFO 49960 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-21:24:43:232  INFO 49960 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-21:24:43:236  INFO 49960 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-21:24:43:291  INFO 49960 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-21:24:43:345  INFO 49960 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-21:24:43:937  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 02cc3f51-bb83-452b-9814-481a46945056
-21:24:43:937  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] RpcClient init label, labels = {module=naming, source=sdk}
-21:24:43:939  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-21:24:43:939  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-21:24:43:939  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-21:24:43:939  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-21:24:44:063  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732281883948_192.168.40.1_59424
-21:24:44:064  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-21:24:44:064  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x000000080045c040
-21:24:44:064  INFO 49960 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Notify connected event to listeners.
-21:24:44:121  INFO 49960 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-21:24:44:457  INFO 49960 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.40.136:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
-21:24:44:700  INFO 49960 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Receive server push request, request = NotifySubscriberRequest, requestId = 357
-21:24:44:713  INFO 49960 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [02cc3f51-bb83-452b-9814-481a46945056] Ack server push request, request = NotifySubscriberRequest, requestId = 357
-21:24:44:955  INFO 49960 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0xb028a86f, L:/192.168.40.1:59433 - R:/192.168.40.136:8099]
-21:24:44:961  INFO 49960 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 61 ms, version:1.5.2,role:TMROLE,channel:[id: 0xb028a86f, L:/192.168.40.1:59433 - R:/192.168.40.136:8099]
-21:24:44:962  INFO 49960 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
-21:24:44:972  INFO 49960 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-21:24:44:973  INFO 49960 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-21:24:44:982  INFO 49960 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-21:24:44:982  INFO 49960 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
-21:24:44:982  INFO 49960 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-21:24:44:985  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:45:191  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:45:195  INFO 49960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:24:45:466  INFO 49960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-21:24:45:467  INFO 49960 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
-21:24:45:467  INFO 49960 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-21:24:45:468  INFO 49960 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-21:24:45:473  INFO 49960 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
-21:24:45:486  INFO 49960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-21:24:45:486  INFO 49960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-21:24:45:671  INFO 49960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-21:24:45:671  INFO 49960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3985 ms
-21:24:45:924  INFO 49960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-21:24:47:211  INFO 49960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-21:24:47:322  INFO 49960 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-21:24:47:322  INFO 49960 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.40.136:3306/hm-item
-21:24:47:324  INFO 49960 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.40.136:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.40.136:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
-21:24:47:396  INFO 49960 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x9a55fe03, L:/192.168.40.1:59459 - R:/192.168.40.136:8099]
-21:24:47:396  INFO 49960 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 67 ms, version:1.5.2,role:RMROLE,channel:[id: 0x9a55fe03, L:/192.168.40.1:59459 - R:/192.168.40.136:8099]
-21:24:49:702  INFO 49960 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-21:24:50:581  INFO 49960 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-21:24:51:858  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 7e12f871-ce91-4fc7-a7b9-297af217433f
-21:24:51:859  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] RpcClient init label, labels = {module=naming, source=sdk}
-21:24:51:859  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-21:24:51:859  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-21:24:51:859  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-21:24:51:859  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-21:24:51:995  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732281891869_192.168.40.1_59610
-21:24:51:995  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-21:24:51:995  INFO 49960 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Notify connected event to listeners.
-21:24:51:995  INFO 49960 --- [main] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x000000080045c040
-21:24:52:024  INFO 49960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-21:24:52:038  INFO 49960 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.40.1:8081 register finished
-21:24:52:411  INFO 49960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-21:24:52:413  INFO 49960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-21:24:52:432  INFO 49960 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-21:24:52:513  INFO 49960 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.40.136:5672]
-21:24:52:552  INFO 49960 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Receive server push request, request = NotifySubscriberRequest, requestId = 362
-21:24:52:555  INFO 49960 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3615f8d9:0/SimpleConnection@23471b2f [delegate=amqp://hmall@192.168.40.136:5672//hmall, localPort= 59615]
-21:24:52:560  INFO 49960 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [7e12f871-ce91-4fc7-a7b9-297af217433f] Ack server push request, request = NotifySubscriberRequest, requestId = 362
-21:24:52:637  INFO 49960 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 17.076 seconds (JVM running for 18.415)
-21:24:52:642  INFO 49960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
-21:24:52:643  INFO 49960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
-21:24:52:643  INFO 49960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
-21:40:46:866  INFO 49960 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-21:40:46:872  INFO 49960 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-21:40:46:914  INFO 49960 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 42 ms
-21:40:47:482 DEBUG 49960 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
-21:40:47:665 DEBUG 49960 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
-21:40:49:285  INFO 49960 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.40.136:8099:81653117785810102,branchId=81653117785810112,branchType=AT,resourceId=jdbc:mysql://192.168.40.136:3306/hm-item,applicationData={"autoCommit":false}
-21:40:49:288  INFO 49960 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.40.136:8099:81653117785810102 81653117785810112 jdbc:mysql://192.168.40.136:3306/hm-item {"autoCommit":false}
-21:40:49:290  INFO 49960 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-21:40:57:701 DEBUG 49960 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
-21:40:57:702 DEBUG 49960 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
-21:40:58:151  INFO 49960 --- [rpcDispatch_RMROLE_1_2_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.40.136:8099:81653117785810116,branchId=81653117785810122,branchType=AT,resourceId=jdbc:mysql://192.168.40.136:3306/hm-item,applicationData={"autoCommit":false}
-21:40:58:151  INFO 49960 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.40.136:8099:81653117785810116 81653117785810122 jdbc:mysql://192.168.40.136:3306/hm-item {"autoCommit":false}
-21:40:58:152  INFO 49960 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-21:42:03:763 DEBUG 49960 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
-21:42:03:764 DEBUG 49960 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 1533902(Long)
-21:42:04:096  INFO 49960 --- [rpcDispatch_RMROLE_1_3_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.40.136:8099:81653117785810177,branchId=81653117785810183,branchType=AT,resourceId=jdbc:mysql://192.168.40.136:3306/hm-item,applicationData={"autoCommit":false}
-21:42:04:097  INFO 49960 --- [rpcDispatch_RMROLE_1_3_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.40.136:8099:81653117785810177 81653117785810183 jdbc:mysql://192.168.40.136:3306/hm-item {"autoCommit":false}
-21:42:04:097  INFO 49960 --- [rpcDispatch_RMROLE_1_3_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-21:57:13:173  WARN 49960 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-21:57:13:174  WARN 49960 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-21:57:13:175  WARN 49960 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-21:57:13:176  WARN 49960 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-21:57:13:229  INFO 49960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-21:57:13:886  INFO 49960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-21:57:14:237  INFO 49960 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
-21:57:14:238  INFO 49960 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-21:57:14:288  INFO 49960 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-21:57:14:608  INFO 49960 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
-21:57:14:609  INFO 49960 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@3b13e98c[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
-21:57:14:609  INFO 49960 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1732281891869_192.168.40.1_59610
-21:57:14:610  INFO 49960 --- [nacos-grpc-client-executor-459] c.a.n.c.remote.client.grpc.GrpcClient    : [1732281891869_192.168.40.1_59610]Ignore complete event,isRunning:false,isAbandon=false
-21:57:14:615  INFO 49960 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4a773c36[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 460]
-21:57:14:635  INFO 49960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-21:57:14:646  INFO 49960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-21:57:14:650  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]
-21:57:14:650  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]
-21:57:14:650  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]
-21:57:14:651  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]
-21:57:14:651  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]) will closed
-21:57:14:651  INFO 49960 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x9a55fe03, L:/192.168.40.1:59459 ! R:/192.168.40.136:8099]) will closed
-21:57:22:822  INFO 55176 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
-21:57:23:576  INFO 55176 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9ca8d87e-a934-3e49-b90d-691d65f4328b
-21:57:23:618  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:618  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:618  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:640  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:644  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:645  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:645  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$564/0x0000000800685440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:646  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:649  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:650  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:23:652  INFO 55176 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-21:57:23:685  INFO 55176 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-21:57:23:688  INFO 55176 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-21:57:23:724  INFO 55176 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-21:57:23:773  INFO 55176 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-21:57:24:461  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26
-21:57:24:461  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] RpcClient init label, labels = {module=naming, source=sdk}
-21:57:24:462  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-21:57:24:462  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-21:57:24:463  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-21:57:24:463  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-21:57:24:585  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732283844470_192.168.40.1_51235
-21:57:24:585  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-21:57:24:585  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
-21:57:24:585  INFO 55176 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Notify connected event to listeners.
-21:57:24:638  INFO 55176 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-21:57:24:871  INFO 55176 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.40.136:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
-21:57:25:154  INFO 55176 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Receive server push request, request = NotifySubscriberRequest, requestId = 440
-21:57:25:166  INFO 55176 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [32f48fd1-14fb-47cf-9c1e-c2b20f4aaf26] Ack server push request, request = NotifySubscriberRequest, requestId = 440
-21:57:25:174  INFO 55176 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x6a8a33e6, L:/192.168.40.1:51236 - R:/192.168.40.136:8099]
-21:57:25:178  INFO 55176 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 50 ms, version:1.5.2,role:TMROLE,channel:[id: 0x6a8a33e6, L:/192.168.40.1:51236 - R:/192.168.40.136:8099]
-21:57:25:178  INFO 55176 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
-21:57:25:185  INFO 55176 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-21:57:25:185  INFO 55176 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-21:57:25:189  INFO 55176 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-21:57:25:189  INFO 55176 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
-21:57:25:189  INFO 55176 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-21:57:25:191  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:25:313  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:25:315  INFO 55176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:57:25:643  INFO 55176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-21:57:25:644  INFO 55176 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
-21:57:25:644  INFO 55176 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-21:57:25:644  INFO 55176 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-21:57:25:646  INFO 55176 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
-21:57:25:654  INFO 55176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-21:57:25:654  INFO 55176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-21:57:25:853  INFO 55176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-21:57:25:854  INFO 55176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3022 ms
-21:57:26:009  INFO 55176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-21:57:26:527  INFO 55176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-21:57:26:595  INFO 55176 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-21:57:26:595  INFO 55176 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.40.136:3306/hm-item
-21:57:26:595  INFO 55176 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.40.136:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.40.136:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
-21:57:26:626  INFO 55176 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x4f915298, L:/192.168.40.1:51263 - R:/192.168.40.136:8099]
-21:57:26:626  INFO 55176 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 28 ms, version:1.5.2,role:RMROLE,channel:[id: 0x4f915298, L:/192.168.40.1:51263 - R:/192.168.40.136:8099]
-21:57:28:461  INFO 55176 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-21:57:29:654  INFO 55176 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-21:57:31:064  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of c709d345-1e57-4c1b-9815-a2a82ac3b6de
-21:57:31:065  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] RpcClient init label, labels = {module=naming, source=sdk}
-21:57:31:066  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-21:57:31:066  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-21:57:31:066  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-21:57:31:066  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-21:57:31:250  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732283851115_192.168.40.1_51320
-21:57:31:250  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-21:57:31:250  INFO 55176 --- [main] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
-21:57:31:250  INFO 55176 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Notify connected event to listeners.
-21:57:31:284  INFO 55176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-21:57:31:302  INFO 55176 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.40.1:8081 register finished
-21:57:31:848  INFO 55176 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Receive server push request, request = NotifySubscriberRequest, requestId = 442
-21:57:31:857  INFO 55176 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c709d345-1e57-4c1b-9815-a2a82ac3b6de] Ack server push request, request = NotifySubscriberRequest, requestId = 442
-21:57:31:992  INFO 55176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-21:57:31:996  INFO 55176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-21:57:32:027  INFO 55176 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-21:57:32:188  INFO 55176 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.40.136:5672]
-21:57:32:362  INFO 55176 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#36570936:0/SimpleConnection@43815bc [delegate=amqp://hmall@192.168.40.136:5672//hmall, localPort= 51323]
-21:57:32:501  INFO 55176 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 12.834 seconds (JVM running for 13.691)
-21:57:32:507  INFO 55176 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
-21:57:32:508  INFO 55176 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
-21:57:32:509  INFO 55176 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
-21:59:23:535  INFO 55176 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-21:59:23:536  INFO 55176 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-21:59:23:537  INFO 55176 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-21:59:23:756 DEBUG 55176 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : ==>  Preparing: INSERT INTO item ( name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
-21:59:23:779 DEBUG 55176 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : ==> Parameters: 荣耀华为(String), 900000(Integer), 1000(Integer), 10(String), 手机(String), 华为(String), 1(String), 10(Integer), 0(Integer), true(Boolean), 1(Integer)
-21:59:24:442 DEBUG 55176 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : <==    Updates: 1
-21:59:24:582 ERROR 55176 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+16:17:13:182  INFO 11964 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:17:14:466  INFO 11964 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9ca8d87e-a934-3e49-b90d-691d65f4328b
+16:17:14:533  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:533  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:534  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:557  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:561  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:562  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:562  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$564/0x0000000800685c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:563  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:567  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:570  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:14:571  INFO 11964 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+16:17:14:623  INFO 11964 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+16:17:14:631  INFO 11964 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+16:17:14:689  INFO 11964 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+16:17:14:748  INFO 11964 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+16:17:16:697  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 3dca1043-669f-45a5-b77a-08196d6044d9
+16:17:16:698  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] RpcClient init label, labels = {module=naming, source=sdk}
+16:17:16:699  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:17:16:699  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:17:16:700  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:17:16:700  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
+16:17:16:930  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732349835569_192.168.40.1_51298
+16:17:16:930  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:17:16:930  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Notify connected event to listeners.
+16:17:16:931  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
+16:17:17:093  INFO 11964 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
+16:17:17:351  INFO 11964 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.40.136:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
+16:17:17:566  INFO 11964 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Receive server push request, request = NotifySubscriberRequest, requestId = 460
+16:17:17:582  INFO 11964 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Ack server push request, request = NotifySubscriberRequest, requestId = 460
+16:17:22:855  INFO 11964 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x51c4f4e6, L:/192.168.40.1:51370 - R:/192.168.40.136:8099]
+16:17:22:858  INFO 11964 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 5147 ms, version:1.5.2,role:TMROLE,channel:[id: 0x51c4f4e6, L:/192.168.40.1:51370 - R:/192.168.40.136:8099]
+16:17:22:859  INFO 11964 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
+16:17:22:866  INFO 11964 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+16:17:22:866  INFO 11964 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+16:17:22:871  INFO 11964 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+16:17:22:871  INFO 11964 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
+16:17:22:871  INFO 11964 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+16:17:22:872  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:22:997  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:22:999  INFO 11964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:17:23:194  INFO 11964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+16:17:23:195  INFO 11964 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+16:17:23:195  INFO 11964 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+16:17:23:195  INFO 11964 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:17:23:197  INFO 11964 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+16:17:23:205  INFO 11964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:17:23:205  INFO 11964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:17:23:327  INFO 11964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:17:23:327  INFO 11964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10117 ms
+16:17:23:478  INFO 11964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:17:30:032  INFO 11964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:17:30:139  INFO 11964 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
+16:17:30:140  INFO 11964 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.40.136:3306/hm-item
+16:17:30:140  INFO 11964 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.40.136:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.40.136:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
+16:17:31:108  INFO 11964 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x0236f32f, L:/192.168.40.1:51442 - R:/192.168.40.136:8099]
+16:17:31:108  INFO 11964 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 965 ms, version:1.5.2,role:RMROLE,channel:[id: 0x0236f32f, L:/192.168.40.1:51442 - R:/192.168.40.136:8099]
+16:17:32:825  INFO 11964 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+16:17:34:339  INFO 11964 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:17:36:247  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 458ee14d-89b3-4c04-be2d-d354778f40b2
+16:17:36:248  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] RpcClient init label, labels = {module=naming, source=sdk}
+16:17:36:248  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:17:36:248  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:17:36:248  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:17:36:249  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
+16:17:36:586  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732349855127_192.168.40.1_51525
+16:17:36:586  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:17:36:586  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Notify connected event to listeners.
+16:17:36:586  INFO 11964 --- [main] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
+16:17:36:693  INFO 11964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+16:17:36:754  INFO 11964 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.40.1:8081 register finished
+16:17:37:217  INFO 11964 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Receive server push request, request = NotifySubscriberRequest, requestId = 466
+16:17:37:226  INFO 11964 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Ack server push request, request = NotifySubscriberRequest, requestId = 466
+16:17:37:652  INFO 11964 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:17:37:656  INFO 11964 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:17:37:692  INFO 11964 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:17:37:859  INFO 11964 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.40.136:5672]
+16:17:38:055  INFO 11964 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3df54fd5:0/SimpleConnection@415cb259 [delegate=amqp://hmall@192.168.40.136:5672//hmall, localPort= 51543]
+16:17:38:877  INFO 11964 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 31.514 seconds (JVM running for 32.722)
+16:17:38:884  INFO 11964 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+16:17:38:885  INFO 11964 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+16:17:38:886  INFO 11964 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+16:18:21:216  INFO 11964 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:18:21:217  INFO 11964 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:18:21:220  INFO 11964 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+16:18:21:529 DEBUG 11964 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET status=? WHERE id=?
+16:18:21:560 DEBUG 11964 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 2(Integer), 317578(Long)
+16:18:21:747 DEBUG 11964 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+16:19:10:256 DEBUG 11964 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET status=? WHERE id=?
+16:19:10:256 DEBUG 11964 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 1(Integer), 317578(Long)
+16:19:10:266 DEBUG 11964 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+16:19:11:269  WARN 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
 
-java.lang.NullPointerException: null
-	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.createMessage(AbstractJackson2MessageConverter.java:473) ~[spring-amqp-2.4.12.jar:2.4.12]
-	at org.springframework.amqp.support.converter.AbstractMessageConverter.toMessage(AbstractMessageConverter.java:70) ~[spring-amqp-2.4.12.jar:2.4.12]
-	at org.springframework.amqp.support.converter.AbstractMessageConverter.toMessage(AbstractMessageConverter.java:58) ~[spring-amqp-2.4.12.jar:2.4.12]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertMessageIfNecessary(RabbitTemplate.java:1861) ~[spring-rabbit-2.4.12.jar:2.4.12]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1205) ~[spring-rabbit-2.4.12.jar:2.4.12]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1198) ~[spring-rabbit-2.4.12.jar:2.4.12]
-	at com.hmall.item.controller.ItemController.saveItem(ItemController.java:68) ~[classes/:na]
-	at com.hmall.item.controller.ItemController$$FastClassBySpringCGLIB$$f0daa2a5.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.27.jar:5.3.27]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.27.jar:5.3.27]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.27.jar:5.3.27]
-	at com.hmall.item.controller.ItemController$$EnhancerBySpringCGLIB$$1af5c841.saveItem(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:157) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232) ~[spring-rabbit-2.4.12.jar:2.4.12]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:343) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:367) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:244) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 11 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.Long` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"id":317578,"name":null,"price":null,"stock":null,"image":null,"category":null,"brand":null,"spec":null,"sold":null,"commentCount":null,"isAD":null,"status":1,"createTime":null,"updateTime":null,"creater":null,"updater":null}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1420) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.extractScalarFromObject(DeserializationContext.java:932) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:949) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:575) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:550) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-2.4.12.jar:2.4.12]
+	... 18 common frames omitted
 
-22:08:15:455  WARN 55176 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-22:08:15:455  WARN 55176 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-22:08:15:455  WARN 55176 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-22:08:15:457  WARN 55176 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-22:08:15:464  INFO 55176 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-22:08:15:672  INFO 55176 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-22:08:15:979  INFO 55176 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
-22:08:15:979  INFO 55176 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-22:08:15:990  INFO 55176 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-22:08:16:320  INFO 55176 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
-22:08:16:320  INFO 55176 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@18cc9c56[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
-22:08:16:320  INFO 55176 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1732283851115_192.168.40.1_51320
-22:08:16:326  INFO 55176 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@d29a945[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 168]
-22:08:16:334  INFO 55176 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-22:08:16:344  INFO 55176 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-22:08:16:346  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]
-22:08:16:346  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]
-22:08:16:346  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]
-22:08:16:346  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]
-22:08:16:346  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]) will closed
-22:08:16:347  INFO 55176 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x4f915298, L:/192.168.40.1:51263 ! R:/192.168.40.136:8099]) will closed
-22:08:23:965  INFO 37380 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
-22:08:24:704  INFO 37380 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9ca8d87e-a934-3e49-b90d-691d65f4328b
-22:08:24:744  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:744  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:744  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:764  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:765  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:767  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:767  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$564/0x0000000800685c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:768  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:770  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:771  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:24:773  INFO 37380 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-22:08:24:810  INFO 37380 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-22:08:24:812  INFO 37380 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-22:08:24:858  INFO 37380 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-22:08:24:907  INFO 37380 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-22:08:25:684  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of df63841b-c923-4ee3-a7d9-824b6a866c97
-22:08:25:684  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] RpcClient init label, labels = {module=naming, source=sdk}
-22:08:25:685  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-22:08:25:685  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-22:08:25:686  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-22:08:25:686  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-22:08:25:810  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732284505694_192.168.40.1_53454
-22:08:25:810  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-22:08:25:810  INFO 37380 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Notify connected event to listeners.
-22:08:25:810  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
-22:08:25:847  INFO 37380 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-22:08:26:081  INFO 37380 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.40.136:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
-22:08:26:394  INFO 37380 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Receive server push request, request = NotifySubscriberRequest, requestId = 444
-22:08:26:405  INFO 37380 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [df63841b-c923-4ee3-a7d9-824b6a866c97] Ack server push request, request = NotifySubscriberRequest, requestId = 444
-22:08:26:404  INFO 37380 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x78f3f9f3, L:/192.168.40.1:53477 - R:/192.168.40.136:8099]
-22:08:26:409  INFO 37380 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 46 ms, version:1.5.2,role:TMROLE,channel:[id: 0x78f3f9f3, L:/192.168.40.1:53477 - R:/192.168.40.136:8099]
-22:08:26:410  INFO 37380 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
-22:08:26:417  INFO 37380 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-22:08:26:417  INFO 37380 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-22:08:26:423  INFO 37380 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-22:08:26:423  INFO 37380 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
-22:08:26:423  INFO 37380 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-22:08:26:425  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:26:560  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:26:562  INFO 37380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-22:08:26:785  INFO 37380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-22:08:26:786  INFO 37380 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
-22:08:26:786  INFO 37380 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-22:08:26:786  INFO 37380 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-22:08:26:789  INFO 37380 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
-22:08:26:798  INFO 37380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-22:08:26:798  INFO 37380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-22:08:26:928  INFO 37380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-22:08:26:929  INFO 37380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2950 ms
-22:08:27:075  INFO 37380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-22:08:27:704  INFO 37380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-22:08:27:760  INFO 37380 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.40.136:8099
-22:08:27:760  INFO 37380 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.40.136:3306/hm-item
-22:08:27:760  INFO 37380 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.40.136:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.40.136:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
-22:08:27:774  INFO 37380 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x8cb7c9ea, L:/192.168.40.1:53482 - R:/192.168.40.136:8099]
-22:08:27:774  INFO 37380 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 11 ms, version:1.5.2,role:RMROLE,channel:[id: 0x8cb7c9ea, L:/192.168.40.1:53482 - R:/192.168.40.136:8099]
-22:08:30:139  INFO 37380 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-22:08:31:344  INFO 37380 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-22:08:32:697  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 4fcaeb9d-10cc-4261-a736-a7abcd06121f
-22:08:32:698  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] RpcClient init label, labels = {module=naming, source=sdk}
-22:08:32:698  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-22:08:32:698  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-22:08:32:698  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-22:08:32:699  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Try to connect to server on start up, server: {serverIp = '192.168.40.136', server main port = 8848}
-22:08:32:868  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Success to connect to server [192.168.40.136:8848] on start up, connectionId = 1732284512752_192.168.40.1_53543
-22:08:32:868  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-22:08:32:868  INFO 37380 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Notify connected event to listeners.
-22:08:32:868  INFO 37380 --- [main] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$470/0x0000000800433040
-22:08:32:907  INFO 37380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-22:08:32:925  INFO 37380 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.40.1:8081 register finished
-22:08:33:077  INFO 37380 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-22:08:33:077  INFO 37380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-22:08:33:079  INFO 37380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-22:08:33:438 DEBUG 37380 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : ==>  Preparing: INSERT INTO item ( name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
-22:08:33:466  INFO 37380 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Receive server push request, request = NotifySubscriberRequest, requestId = 446
-22:08:33:467 DEBUG 37380 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : ==> Parameters: 荣耀华为(String), 900000(Integer), 1000(Integer), 10(String), 手机(String), 华为(String), 1(String), 10(Integer), 0(Integer), true(Boolean), 1(Integer)
-22:08:33:473  INFO 37380 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [4fcaeb9d-10cc-4261-a736-a7abcd06121f] Ack server push request, request = NotifySubscriberRequest, requestId = 446
-22:08:33:496 DEBUG 37380 --- [http-nio-8081-exec-1] com.hmall.item.mapper.ItemMapper.insert  : <==    Updates: 1
-22:08:33:520  INFO 37380 --- [http-nio-8081-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.40.136:5672]
-22:08:33:645  INFO 37380 --- [http-nio-8081-exec-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#12f12744:0/SimpleConnection@427315a4 [delegate=amqp://hmall@192.168.40.136:5672//hmall, localPort= 53550]
-22:08:33:672  INFO 37380 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-22:08:33:676  INFO 37380 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-22:08:33:709  INFO 37380 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-22:08:33:990  INFO 37380 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 13.208 seconds (JVM running for 14.121)
-22:08:33:999  INFO 37380 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
-22:08:33:999  INFO 37380 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
-22:08:34:000  INFO 37380 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
-22:08:43:792 DEBUG 37380 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.item.mapper.ItemMapper.selectById    : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
-22:08:43:792 DEBUG 37380 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.item.mapper.ItemMapper.selectById    : ==> Parameters: 100002672310(Long)
-22:08:43:819 DEBUG 37380 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.item.mapper.ItemMapper.selectById    : <==      Total: 1
-22:10:31:987  WARN 37380 --- [http-nio-8081-exec-4] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7106e05e] Transaction not enabled
-22:10:31:991 DEBUG 37380 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.recoverStock  : ==>  Preparing: UPDATE item SET stock = stock + ? WHERE id = ?
-22:10:32:036 DEBUG 37380 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.recoverStock  : ==> Parameters: 1(Integer), 14741770661(Long)
-22:10:33:218  INFO 37380 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.40.136:8099:81653117785810284,branchId=81653117785810289,branchType=AT,resourceId=jdbc:mysql://192.168.40.136:3306/hm-item,applicationData=null
-22:10:33:219  INFO 37380 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.40.136:8099:81653117785810284 81653117785810289 jdbc:mysql://192.168.40.136:3306/hm-item null
-22:10:33:221  INFO 37380 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-22:16:47:013  WARN 37380 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-22:16:47:013  WARN 37380 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-22:16:47:013  WARN 37380 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-22:16:47:014  WARN 37380 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-22:16:47:025  INFO 37380 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-22:16:47:706  INFO 37380 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-22:16:47:977  INFO 37380 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
-22:16:47:977  INFO 37380 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-22:16:48:058  INFO 37380 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-22:16:48:372  INFO 37380 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
-22:16:48:372  INFO 37380 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@3c3f5587[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
-22:16:48:372  INFO 37380 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1732284512752_192.168.40.1_53543
-22:16:48:374  INFO 37380 --- [nacos-grpc-client-executor-130] c.a.n.c.remote.client.grpc.GrpcClient    : [1732284512752_192.168.40.1_53543]Ignore complete event,isRunning:false,isAbandon=false
-22:16:48:377  INFO 37380 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5d8bcb21[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 131]
-22:16:48:387  INFO 37380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-22:16:48:399  INFO 37380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-22:16:48:401  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]
-22:16:48:401  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]
-22:16:48:401  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]
-22:16:48:402  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]
-22:16:48:402  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]) will closed
-22:16:48:402  INFO 37380 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x8cb7c9ea, L:/192.168.40.1:53482 ! R:/192.168.40.136:8099]) will closed
+16:19:11:271  WARN 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@5c23016b(byte[226])' MessageProperties [headers={__TypeId__=com.hmall.item.domain.po.Item}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=item.update.direct, receivedRoutingKey=update.item.status.to.elasticsearch, receivedDelay=1000, deliveryTag=1, consumerTag=amq.ctag-ih2prpOeLv2U4e1z0DPpTg, consumerQueue=item.update.queue])
+16:19:11:272 ERROR 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1478) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1762) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1537) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:157) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 6 common frames omitted
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:343) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:367) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:244) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 11 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.Long` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"id":317578,"name":null,"price":null,"stock":null,"image":null,"category":null,"brand":null,"spec":null,"sold":null,"commentCount":null,"isAD":null,"status":1,"createTime":null,"updateTime":null,"creater":null,"updater":null}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1420) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.extractScalarFromObject(DeserializationContext.java:932) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:949) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:575) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:550) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-2.4.12.jar:2.4.12]
+	... 18 common frames omitted
+
+16:19:34:689  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Server healthy check fail, currentConnection = 1732349855127_192.168.40.1_51525
+16:19:34:690  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+16:19:35:107  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Server healthy check fail, currentConnection = 1732349835569_192.168.40.1_51298
+16:19:35:107  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+16:19:36:580  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Success to connect a server [192.168.40.136:8848], connectionId = 1732349975141_192.168.40.1_52137
+16:19:36:580  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Abandon prev connection, server is 192.168.40.136:8848, connectionId is 1732349855127_192.168.40.1_51525
+16:19:36:581  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1732349855127_192.168.40.1_51525
+16:19:36:588  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Notify disconnected event to listeners
+16:19:36:589  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Notify connected event to listeners.
+16:19:36:590  WARN 11964 --- [nacos-grpc-client-executor-40] c.a.n.c.remote.client.grpc.GrpcClient    : [1732349855127_192.168.40.1_51525]Ignore error event,isRunning:true,isAbandon=true
+16:19:36:602  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Success to connect a server [192.168.40.136:8848], connectionId = 1732349975213_192.168.40.1_52144
+16:19:36:602  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Abandon prev connection, server is 192.168.40.136:8848, connectionId is 1732349835569_192.168.40.1_51298
+16:19:36:602  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1732349835569_192.168.40.1_51298
+16:19:36:603  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Notify disconnected event to listeners
+16:19:36:604  INFO 11964 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Notify connected event to listeners.
+16:19:36:604  WARN 11964 --- [nacos-grpc-client-executor-50] c.a.n.c.remote.client.grpc.GrpcClient    : [1732349835569_192.168.40.1_51298]Ignore error event,isRunning:true,isAbandon=true
+16:19:38:984  INFO 11964 --- [nacos-grpc-client-executor-53] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Receive server push request, request = NotifySubscriberRequest, requestId = 470
+16:19:38:984  INFO 11964 --- [nacos-grpc-client-executor-53] com.alibaba.nacos.common.remote.client   : [3dca1043-669f-45a5-b77a-08196d6044d9] Ack server push request, request = NotifySubscriberRequest, requestId = 470
+16:19:40:234  INFO 11964 --- [nacos-grpc-client-executor-47] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Receive server push request, request = NotifySubscriberRequest, requestId = 473
+16:19:40:235  INFO 11964 --- [nacos-grpc-client-executor-47] com.alibaba.nacos.common.remote.client   : [458ee14d-89b3-4c04-be2d-d354778f40b2] Ack server push request, request = NotifySubscriberRequest, requestId = 473
+16:20:12:586 DEBUG 11964 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET status=? WHERE id=?
+16:20:12:586 DEBUG 11964 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 1(Integer), 317578(Long)
+16:20:12:639 DEBUG 11964 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+16:20:13:657  WARN 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:157) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:343) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:367) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:244) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 11 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.Long` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"id":317578,"name":null,"price":null,"stock":null,"image":null,"category":null,"brand":null,"spec":null,"sold":null,"commentCount":null,"isAD":null,"status":1,"createTime":null,"updateTime":null,"creater":null,"updater":null}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1420) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.extractScalarFromObject(DeserializationContext.java:932) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:949) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:575) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:550) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-2.4.12.jar:2.4.12]
+	... 18 common frames omitted
+
+16:20:13:659  WARN 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@264912b1(byte[226])' MessageProperties [headers={__TypeId__=com.hmall.item.domain.po.Item}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=item.update.direct, receivedRoutingKey=update.item.status.to.elasticsearch, receivedDelay=1000, deliveryTag=1, consumerTag=amq.ctag-hNj_NLNYsn8qnQ604N6tNQ, consumerQueue=item.update.queue])
+16:20:13:659 ERROR 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1478) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1762) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1537) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:157) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 6 common frames omitted
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:343) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:367) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:244) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:147) ~[spring-rabbit-2.4.12.jar:2.4.12]
+	... 11 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.Long` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"id":317578,"name":null,"price":null,"stock":null,"image":null,"category":null,"brand":null,"spec":null,"sold":null,"commentCount":null,"isAD":null,"status":1,"createTime":null,"updateTime":null,"creater":null,"updater":null}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1420) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.extractScalarFromObject(DeserializationContext.java:932) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:949) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:575) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:550) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-2.4.12.jar:2.4.12]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-2.4.12.jar:2.4.12]
+	... 18 common frames omitted
+
+16:24:50:771  WARN 11964 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:24:50:771  WARN 11964 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:24:50:772  WARN 11964 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:24:50:772  WARN 11964 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:24:50:798  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+16:24:50:801  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+16:24:50:802  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+16:24:50:805  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+16:24:51:383  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+16:24:51:383  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+16:24:52:674  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+16:24:52:674  INFO 11964 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+16:24:53:498  INFO 11964 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+16:24:53:498  INFO 11964 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+16:24:53:498  INFO 11964 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+16:24:53:498  INFO 11964 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+16:24:53:498  INFO 11964 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:24:53:676  INFO 11964 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:24:54:000  INFO 11964 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+16:24:54:000  INFO 11964 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@53274dbb[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+16:24:54:001  INFO 11964 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1732349975141_192.168.40.1_52137
+16:24:54:001  INFO 11964 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5c919c8b[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 128]
+16:24:54:485  INFO 11964 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:24:54:497  INFO 11964 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:24:54:507  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]
+16:24:54:507  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]
+16:24:54:508  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]
+16:24:54:508  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]
+16:24:54:508  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]) will closed
+16:24:54:508  INFO 11964 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x0236f32f, L:/192.168.40.1:51442 ! R:/192.168.40.136:8099]) will closed
