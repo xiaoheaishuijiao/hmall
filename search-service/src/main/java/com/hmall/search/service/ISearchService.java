@@ -3,6 +3,7 @@ package com.hmall.search.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.common.domain.PageDTO;
+import com.hmall.search.domain.dto.CateAndBrand;
 import com.hmall.search.domain.po.Item;
 import com.hmall.search.domain.query.ItemPageQuery;
 
@@ -15,4 +16,6 @@ public interface ISearchService extends IService<Item> {
     ItemDTO listByIdByES(Long id) throws IOException;
 
     List<ItemDTO> listByIdsByES(List<Long> ids) throws IOException;
+
+    CateAndBrand searchFilters(ItemPageQuery query) throws IOException;
 }

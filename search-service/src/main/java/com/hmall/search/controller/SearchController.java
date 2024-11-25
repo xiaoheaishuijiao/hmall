@@ -7,6 +7,7 @@ import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.common.domain.PageDTO;
+import com.hmall.search.domain.dto.CateAndBrand;
 import com.hmall.search.domain.po.ItemDoc;
 import com.hmall.search.domain.query.ItemPageQuery;
 import com.hmall.search.mapper.SearchMapper;
@@ -57,6 +58,12 @@ public class SearchController {
     @GetMapping
     public List<ItemDTO> searchByIds(@RequestParam("ids") List<Long> ids) throws IOException {
         return searchService.listByIdsByES(ids);
+    }
+
+    @ApiOperation("根据搜索内容返回分类和品牌的聚合")
+    @PostMapping("/filters")
+    public CateAndBrand searchFilters(@RequestBody ItemPageQuery query) throws IOException {
+        return searchService.searchFilters(query);
     }
 
 }
